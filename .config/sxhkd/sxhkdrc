@@ -1,0 +1,69 @@
+###################################################
+#
+#	███████╗██╗  ██╗██╗  ██╗██╗  ██╗██████╗ 
+#	██╔════╝╚██╗██╔╝██║  ██║██║ ██╔╝██╔══██╗
+#	███████╗ ╚███╔╝ ███████║█████╔╝ ██║  ██║
+#	╚════██║ ██╔██╗ ██╔══██║██╔═██╗ ██║  ██║
+#	███████║██╔╝ ██╗██║  ██║██║  ██╗██████╔╝
+#	╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ 
+#
+##################################################
+
+
+# reload sxhkd
+alt + Escape
+	pkill -USR1 -x sxhkd
+
+
+###################
+# Bspwm keybinds # 
+################
+
+## kill application
+alt + shift + c
+	bspc node -k
+
+## close / restart
+alt + shift + {q,r}
+	bspc {quit,wm -r}
+
+## Wwndow state
+alt + shift + {t,f}
+	bspc node -t {tiled,floating}
+
+# focus / swap window
+alt + {_,shift + }{Left,Right,Up,Down}
+	bspc node -{f,s} {west,east,north,south}
+
+# focus / send desktop
+alt + {_,shift + }{1-5}
+	bspc {desktop -f,node -d} focused:'^{1-5}'
+
+
+#########################
+# Application keybinds #
+######################
+
+# terminal
+alt + shift + Return
+	alacritty
+
+# application launchers
+alt + p
+	rofi -show drun
+
+# web browser
+alt + w
+	brave-browser
+
+# discord
+alt + d
+	discord
+
+# printscreen	
+@Print
+	screenshot
+
+# volume control
+{F9,F10,F11}
+	pamixer -{t,d,i} 5;
