@@ -15,7 +15,7 @@ alias mv="mv -iv"
 alias rm="rm -v"
 alias touch="touch -pv"
 alias mkdir="mkdir -pv"
-# alias ls='exa -a --header --icons --group-directories-first'
+# alias ls='eza -a --header --icons --group-directories-first'
 
 # nala
 alias install="sudo nala install"
